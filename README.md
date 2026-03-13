@@ -16,14 +16,14 @@ Our hardware design supports both **Encryption** and **Decryption** and was simu
 
 ## Architecture
 
-We designed a Finite State Machine (FSM) to control the modes of the design, allowing for loading inputs, encrypting, and decrypting separately.
-
-![FSM](./img/fsm.png)
-
 The design was implemented using a **top-down approach**. We split all functions into different modules, verified them separately, and then merged them to form the full architecture.
 
 ![LBlock Architecture](./img/lblock_diagram.png)
 
+
+We designed a Finite State Machine (FSM) to control the modes of the design, allowing for loading inputs, encrypting, and decrypting separately.
+
+![FSM](./img/fsm.png)
 
 ## Verification
 
@@ -35,10 +35,13 @@ To verify the intermediate results between rounds and to assist with debugging, 
 
 **C Model Outputs:**
 * **Encryption Results:**
+  
   ![C Encryption](./img/c_encryption.png)
 * **Decryption Results:**
+  
   ![C Decryption](./img/c_decryption.png)
 * **Final Results:**
+  
   ![C Final](./img/c_final.png)
 
 **Hardware Simulation:**
@@ -53,9 +56,11 @@ The RTL was simulated to ensure the waveforms perfectly matched the expected out
 After synthesis and implementation on the target FPGA, we extracted the following performance metrics:
 
 * **Utilization:**
-  ![Utilization](./img/utilization.png)
+  
+  ![Utilization](./img/summary.png)
 
 * **Power Consumption:**
+  
   ![Power](./img/power.png)
 
 **Conclusion:** The post-implementation reports demonstrate that the design consumes a very small amount of the device's logical resources and has a dynamic power consumption of only 19% of the total on-chip power, validating its "lightweight" nature.
