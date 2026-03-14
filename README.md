@@ -53,7 +53,7 @@ To verify the intermediate results between rounds and to assist with debugging, 
         <img src="./img/c_encryption.png" alt="encr" width="400">
       </td>
       <td style="border: none; padding: 10px;">
-        <img src="./imgc_decryption.png" alt="decr" width="400">
+        <img src="./img/c_decryption.png" alt="decr" width="400">
       </td>
     </tr>
   </table>
