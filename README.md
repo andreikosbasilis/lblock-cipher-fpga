@@ -57,31 +57,37 @@ To verify the intermediate results between rounds and to assist with debugging, 
       </td>
     </tr>
   </table>
-  <p><b>Image 2: Encryprion and Decryption Results</b></p>
+  <p><b>Image 4 and 5: Encryprion and Decryption Results</b></p>
 </div>
   
 <div align="center">
   <img src="./img/c_final.png" alt="Final Results" width="800">
-  <p><b>Image 3: Final Results</b></p>
+  <p><b>Image 6: Final Results</b></p>
 </div>)
 
 **Hardware Simulation:**
 The RTL was simulated to ensure the waveforms perfectly matched the expected outputs from our C model.
 
-* **Vivado Waveform for Encryption & Decryption:**
-  ![Vivado Waveform](./img/vivado_waveform.png)
+<div align="center">
+  <img src="./img/vivado_waveform.png" alt="wave" width="800">
+  <p><b>Image 7: Vivado Waveform for Encryption & Decryption</b></p>
+</div>)
 
 
 ## Implementation Results
 
 After synthesis and implementation on the target FPGA, we extracted the following performance metrics:
 
-* **Utilization:**
-  
-  ![Utilization](./img/summary.png)
+<div align="center">
+  <img src="./img/summary.png" alt="util" width="800">
+  <p><b>Image 8: Utilization</b></p>
+</div>)
 
-* **Power Consumption:**
-  
-  ![Power](./img/power.png)
+
+<div align="center">
+  <img src="./img/power.png" alt="Power Consumption" width="800">
+  <p><b>Image 8: Power Consumption</b></p>
+</div>)
+
 
 **Conclusion:** The post-implementation reports demonstrate that the design consumes a very small amount of the device's logical resources and has a dynamic power consumption of only 19% of the total on-chip power, validating its "lightweight" nature.
