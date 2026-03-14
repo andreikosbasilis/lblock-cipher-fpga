@@ -22,7 +22,10 @@ The design was implemented using a **top-down approach**. We split all functions
 
 Its core components are the **Round Function F** which combines non-linear Confusion and linear Diffusion layers and the **Key Sceduling** which generates unique 32-bit subkeys for each round through cyclical shifts and substitutions.
 
-![LBlock Architecture](./img/lblock_diagram.png)
+<div align="center">
+  <img src="./img/lblock_diagram.png" alt="LBlock Diagram" width="800">
+  <p><b>Image 1:LBlock Diagram</b></p>
+</div>)
 
 We designed a Finite State Machine (FSM) to control the modes of the design, allowing for loading inputs, encrypting, and decrypting separately.
 
