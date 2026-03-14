@@ -29,13 +29,19 @@ Its core components are the **Round Function F** which combines non-linear Confu
 
 We designed a Finite State Machine (FSM) to control the modes of the design, allowing for loading inputs, encrypting, and decrypting separately.
 
-![FSM](./img/fsm.png)
+<div align="center">
+  <img src="./img/fsm.png" alt="FSM State Machine" width="800">
+  <p><b>Image 2:FSM State Machine</b></p>
+</div>)
 
 ## Verification
 
 We verified our results against the official test vectors provided in the original LBlock algorithm paper, as shown below:
 
-![Test Vectors](./img/test_vectors.png)
+<div align="center">
+  <img src="./img/test_vectors.png" alt="Test Vectors" width="800">
+  <p><b>Image 3:Test Vectors</b></p>
+</div>)
 
 To verify the intermediate results between rounds and to assist with debugging, we also wrote a software reference model of the LBlock algorithm in **C**.
 
