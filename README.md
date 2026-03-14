@@ -1,12 +1,14 @@
 # LBlock Lightweight Cipher: Hardware Implementation
 
-*This project was developed collaboratively with my colleague Marianna Aisopou as part of our academic coursework. We divided the design modules and integrated the final datapath and control logic.*
+*This project was developed collaboratively from Vasileios Andreikos and Maria Ioanna Aisopou as part of our academic coursework. We divided the design modules and integrated the final datapath and control logic.*
 
 ## Project Overview
 
-This is a collaborative academic project where we implemented the **LBlock** lightweight block cipher in hardware using **VHDL**.
+This is a collaborative academic project where we implemented the **LBlock** lightweight block cipher in hardware using **VHDL**. It is designed for resource-constrained environments like RFID technology and IoT devices. These applications demand low power consumption and minimal hardware area due to limited computational power.
 
-Our hardware design supports both **Encryption** and **Decryption** and was simulated and verified using Xilinx Vivado on the **xczu7ev-ffvc1156-2-e** device part.
+The algorithm is a variant of the **Feistel structure** consisting of 32 rounds. Its block size is 64 bits and the Master Key is 80 bits.
+
+Our hardware design supports both **Encryption** and **Decryption** and was simulated and verified using Xilinx Vivado on the **Xilinx Zynq UltraScale+(xczu7ev-ffvc1156-2-e**).
 
 **Key Tools Used:**
 * **RTL Design:** VHDL
@@ -16,10 +18,11 @@ Our hardware design supports both **Encryption** and **Decryption** and was simu
 
 ## Architecture
 
-The design was implemented using a **top-down approach**. We split all functions into different modules, verified them separately, and then merged them to form the full architecture.
+The design was implemented using a **top-down approach**. We split all functions into different modules, verified them separately, and then merged them to form the full architecture. The Encryption and Decryption processes share the same hardware modules to minimize the device's logic footprint.
+
+Its core components are the **Round Function F** which combines non-linear Confusion and linear Diffusion layers and the **Key Sceduling** which generates unique 32-bit subkeys for each round through cyclical shifts and substitutions.
 
 ![LBlock Architecture](./img/lblock_diagram.png)
-
 
 We designed a Finite State Machine (FSM) to control the modes of the design, allowing for loading inputs, encrypting, and decrypting separately.
 
