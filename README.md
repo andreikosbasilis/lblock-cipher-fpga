@@ -25,14 +25,14 @@ Its core components are the **Round Function F** which combines non-linear Confu
 <div align="center">
   <img src="./img/lblock_diagram.png" alt="LBlock Diagram" width="800">
   <p><b>Image 1: LBlock Diagram</b></p>
-</div>)
+</div>
 
 We designed a Finite State Machine (FSM) to control the modes of the design, allowing for loading inputs, encrypting, and decrypting separately.
 
 <div align="center">
   <img src="./img/fsm.png" alt="FSM State Machine" width="800">
   <p><b>Image 2: FSM State Machine</b></p>
-</div>)
+</div>
 
 ## Verification
 
@@ -41,7 +41,7 @@ We verified our results against the official test vectors provided in the origin
 <div align="center">
   <img src="./img/test_vectors.png" alt="Test Vectors" width="800">
   <p><b>Image 3: Test Vectors</b></p>
-</div>)
+</div>
 
 To verify the intermediate results between rounds and to assist with debugging, we also wrote a software reference model of the LBlock algorithm in **C**.
 
@@ -63,7 +63,7 @@ To verify the intermediate results between rounds and to assist with debugging, 
 <div align="center">
   <img src="./img/c_final.png" alt="Final Results" width="800">
   <p><b>Image 6: Final Results</b></p>
-</div>)
+</div>
 
 **Hardware Simulation:**
 The RTL was simulated to ensure the waveforms perfectly matched the expected outputs from our C model.
@@ -71,7 +71,7 @@ The RTL was simulated to ensure the waveforms perfectly matched the expected out
 <div align="center">
   <img src="./img/vivado_waveform.png" alt="wave" width="800">
   <p><b>Image 7: Vivado Waveform for Encryption & Decryption</b></p>
-</div>)
+</div>
 
 
 ## Implementation Results
@@ -81,13 +81,13 @@ After synthesis and implementation on the target FPGA, we extracted the followin
 <div align="center">
   <img src="./img/summary.png" alt="util" width="800">
   <p><b>Image 8: Utilization</b></p>
-</div>)
+</div>
 
 
 <div align="center">
   <img src="./img/power.png" alt="Power Consumption" width="800">
   <p><b>Image 9: Power Consumption</b></p>
-</div>)
+</div>
 
 
 **Conclusion:** The post-implementation reports demonstrate that the design consumes a very small amount of the device's logical resources and has a dynamic power consumption of only 19% of the total on-chip power, validating its "lightweight" nature.
