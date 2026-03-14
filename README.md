@@ -24,14 +24,14 @@ Its core components are the **Round Function F** which combines non-linear Confu
 
 <div align="center">
   <img src="./img/lblock_diagram.png" alt="LBlock Diagram" width="800">
-  <p><b>Image 1:LBlock Diagram</b></p>
+  <p><b>Image 1: LBlock Diagram</b></p>
 </div>)
 
 We designed a Finite State Machine (FSM) to control the modes of the design, allowing for loading inputs, encrypting, and decrypting separately.
 
 <div align="center">
   <img src="./img/fsm.png" alt="FSM State Machine" width="800">
-  <p><b>Image 2:FSM State Machine</b></p>
+  <p><b>Image 2: FSM State Machine</b></p>
 </div>)
 
 ## Verification
@@ -40,21 +40,30 @@ We verified our results against the official test vectors provided in the origin
 
 <div align="center">
   <img src="./img/test_vectors.png" alt="Test Vectors" width="800">
-  <p><b>Image 3:Test Vectors</b></p>
+  <p><b>Image 3: Test Vectors</b></p>
 </div>)
 
 To verify the intermediate results between rounds and to assist with debugging, we also wrote a software reference model of the LBlock algorithm in **C**.
 
 **C Model Outputs:**
-* **Encryption Results:**
+<div align="center">
+  <table style="border: none; border-collapse: collapse;">
+    <tr style="border: none;">
+      <td style="border: none; padding: 10px;">
+        <img src="./img/c_encryption.png" alt="encr" width="400">
+      </td>
+      <td style="border: none; padding: 10px;">
+        <img src="./imgc_decryption.png" alt="decr" width="400">
+      </td>
+    </tr>
+  </table>
+  <p><b>Image 2: Encryprion and Decryption Results</b></p>
+</div>
   
-  ![C Encryption](./img/c_encryption.png)
-* **Decryption Results:**
-  
-  ![C Decryption](./img/c_decryption.png)
-* **Final Results:**
-  
-  ![C Final](./img/c_final.png)
+<div align="center">
+  <img src="./img/c_final.png" alt="Final Results" width="800">
+  <p><b>Image 3: Final Results</b></p>
+</div>)
 
 **Hardware Simulation:**
 The RTL was simulated to ensure the waveforms perfectly matched the expected outputs from our C model.
