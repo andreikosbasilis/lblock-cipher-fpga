@@ -80,13 +80,13 @@ After synthesis and implementation on the target FPGA, we extracted the followin
 
 <div align="center">
   <img src="./img/summary.png" alt="util" width="800">
-  <p><b>Image 9: Utilization</b></p>
+  <p><b>Image 8: Utilization</b></p>
 </div>)
 
 
 <div align="center">
   <img src="./img/power.png" alt="Power Consumption" width="800">
-  <p><b>Image 8: Power Consumption</b></p>
+  <p><b>Image 9: Power Consumption</b></p>
 </div>)
 
 
